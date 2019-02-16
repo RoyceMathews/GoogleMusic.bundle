@@ -410,7 +410,7 @@ def GetAlbumInfo(name, id):
 
 ################################################################################
 @route(PREFIX + '/gettrack', song=dict)
-def GetTrack(song, key, include_container=False):
+def GetTrack(song, key, include_container=False, **kwargs):
     storeId = song['storeId'] if 'storeId' in song and API.all_access else 0
     id = song['id'] if 'id' in song else 0
 
